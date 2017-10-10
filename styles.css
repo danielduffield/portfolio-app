@@ -13,3 +13,11 @@
 .nav-button-container {
   height: 50px;
 }
+
+.nav-link {
+  line-height: 50px;
+}
+
+#owner-name {
+  font-size: 1.5em;
+}
