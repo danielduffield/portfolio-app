@@ -40,8 +40,13 @@
 
 .splash-img {
   top: 50px;
-  width: 1885px;
+  height: 641.88px;
+  width: 100%;
   position: absolute;
+  background-image: url("images/splash.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
   z-index: -1;
 }
 
@@ -51,8 +56,9 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.social-media-buttons {
+.social-media-btns {
   text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
@@ -64,6 +70,10 @@
 
 .splash-container {
   height: 658px;
+}
+
+.demo-projects-container {
+  width: 100%;
 }
 
 .project-demo {
