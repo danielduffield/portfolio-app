@@ -55,11 +55,6 @@
   height: 641.88px;
   width: 100%;
   overflow: hidden;
-}
-
-#splash-darkener {
-  z-index: 0;
-  height: 641.88px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
