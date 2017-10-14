@@ -102,4 +102,10 @@
   font-size: 1.15em;
   float: left;
   padding: 0 25px;
+  height: 250px;
+}
+
+.demo-sub-description {
+  position: absolute;
+  bottom: 80px;
 }
