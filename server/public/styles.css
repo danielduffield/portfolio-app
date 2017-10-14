@@ -41,13 +41,20 @@
 .splash-img {
   top: 50px;
   height: 641.88px;
-  width: 100%;
+  width: 1840px;
   position: absolute;
   background-image: url("images/splash.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
   z-index: -1;
+}
+
+.img-wrapper {
+  position: absolute;
+  height: 641.88px;
+  width: 100%;
+  overflow: hidden;
 }
 
 #splash-darkener {
