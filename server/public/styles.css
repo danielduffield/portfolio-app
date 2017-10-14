@@ -94,3 +94,8 @@
   font-size: 1.25em;
   margin-right: 10px;
 }
+
+.demo-details {
+  float: left;
+  margin-left: 25px;
+}
