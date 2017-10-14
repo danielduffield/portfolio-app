@@ -59,6 +59,8 @@
 }
 
 .social-media-btns {
+  top: 50px;
+  height: 641.88px;
   text-align: center;
   width: 100%;
   z-index: 1;
@@ -68,10 +70,6 @@
   top: 550px;
   position: relative;
   width: 35%;
-}
-
-.splash-container {
-  height: 658px;
 }
 
 .demo-projects-container {
