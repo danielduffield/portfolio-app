@@ -60,3 +60,13 @@
   position: relative;
   width: 35%;
 }
+
+.splash-container {
+  height: 658px;
+}
+
+.project-demo {
+  margin: 30px 0;
+  background-color: grey;
+  height: 200px;
+}
