@@ -8,6 +8,8 @@
 #nav-bar {
   background-color: whitesmoke;
   height: 50px;
+  width: 100%;
+  position: fixed;
 }
 
 .nav-button-container {
@@ -36,8 +38,9 @@
 }
 
 .splash-img {
+  top: 50px;
   width: 1885px;
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 
