@@ -95,6 +95,12 @@
 
 .demo-title {
   font-size: 1.75em;
+  text-decoration: none;
+  color: black;
+}
+
+.demo-title-link:hover {
+  text-decoration: none;
 }
 
 .demo-subtitle {
