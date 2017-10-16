@@ -19,6 +19,15 @@ const projects = [
     languages: 'JavaScript, HTML, CSS',
     tech: 'Node.js, Express.js, Socket.io, Bootstrap, RESTful API, Git',
     image: 'images/trackslash-demo-image.png'
+  },
+  {
+    name: 'Codewars Solutions',
+    url: 'https://codewars-solutions.herokuapp.com',
+    repo: 'https://www.github.com/danielduffield/codewars-solutions',
+    description: 'A web app for Codewars members to display their solutions to Javascript coding challenges.',
+    languages: 'JavaScript, SQL, HTML, CSS',
+    tech: 'Node.js, Express.js, React, Redux, Socket.io, Postgres, Bootstrap',
+    image: 'images/codewars-demo-image.png'
   }
 ]
 
