@@ -109,7 +109,7 @@ const DemoTitle = styled.h3`
 
 const DemoSubDescription = styled.div`
   position: absolute;
-  bottom: 80px;
+  bottom: 40px;
 `
 
 const DemoSubtitle = styled.span`
