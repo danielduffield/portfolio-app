@@ -11,6 +11,8 @@
     "watch": "nodemon server/index.js"
   },
   "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "eslint": "4.5.0",
