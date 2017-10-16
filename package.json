@@ -8,6 +8,7 @@
     "lint:js": "eslint ./**/*.js",
     "test": "npm run lint",
     "precommit": "npm test",
+    "bundle": "browserify -t babelify client/main.js -o server/public/bundle.js",
     "watch": "nodemon server/index.js"
   },
   "devDependencies": {
