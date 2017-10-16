@@ -37,25 +37,25 @@ export default class Home extends React.Component {
             <div className="project-demos-container">
               {projects.map((project, index) => {
                 return (
-                  <div key={index} className="project-demo">
+                  <ProjectDemo key={index}>
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <ProjectImage url={project.image} className="demo-img-wrapper"></ProjectImage>
+                      <ProjectImage url={project.image}></ProjectImage>
                     </a>
-                    <div className="demo-details">
+                    <DemoDetails>
                       <a className="demo-title-link" href={project.url} target="_blank" rel="noopener noreferrer">
-                        <h3 className="demo-title">{project.name}</h3>
+                        <DemoTitle>{project.name}</DemoTitle>
                       </a>
-                      <p className="demo-description">{project.description}</p>
-                      <div className="demo-sub-description">
-                        <p className="demo-lang">
-                          <span className="demo-subtitle">Languages: </span> {project.languages}
+                      <p>{project.description}</p>
+                      <DemoSubDescription>
+                        <p>
+                          <DemoSubtitle>Languages: </DemoSubtitle> {project.languages}
                         </p>
-                        <p className="demo-tech">
-                          <span className="demo-subtitle">Technologies: </span> {project.tech}
+                        <p>
+                          <DemoSubtitle>Technologies: </DemoSubtitle> {project.tech}
                         </p>
-                      </div>
-                    </div>
-                  </div>
+                      </DemoSubDescription>
+                    </DemoDetails>
+                  </ProjectDemo>
                 )
               })}
             </div>
@@ -66,6 +66,42 @@ export default class Home extends React.Component {
   }
 }
 
+const ProjectDemo = styled.div`
+  margin: 30px 0;
+  padding: 25px;
+  height: 300px;
+`
+
 const ProjectImage = styled.div`
   background-image: url(${props => props.url});
+  float: left;
+  height: 250px;
+  width: 400px;
+  background-color: dimgrey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`
+
+const DemoDetails = styled.div`
+  font-size: 1.15em;
+  float: left;
+  padding: 0 25px;
+  height: 250px;
+`
+
+const DemoTitle = styled.h3`
+  font-size: 1.75em;
+  text-decoration: none;
+  color: black;
+`
+
+const DemoSubDescription = styled.div`
+  position: absolute;
+  bottom: 80px;
+`
+
+const DemoSubtitle = styled.span`
+  font-size: 1.25em;
+  margin-right: 10px;
 `
