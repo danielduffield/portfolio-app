@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const projects = [
   {
@@ -38,7 +39,7 @@ export default class Home extends React.Component {
                 return (
                   <div key={index} className="project-demo">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <div className="demo-img-wrapper"></div>
+                      <ProjectImage url={project.image} className="demo-img-wrapper"></ProjectImage>
                     </a>
                     <div className="demo-details">
                       <a className="demo-title-link" href={project.url} target="_blank" rel="noopener noreferrer">
@@ -64,3 +65,7 @@ export default class Home extends React.Component {
     )
   }
 }
+
+const ProjectImage = styled.div`
+  background-image: url(${props => props.url});
+`
