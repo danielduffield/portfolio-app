@@ -3,6 +3,15 @@ import styled from 'styled-components'
 
 const projects = [
   {
+    name: 'ConCanvas',
+    url: 'https://con-canvas.herokuapp.com',
+    repo: 'https://www.github.com/danielduffield/concanvas',
+    description: 'An app for artists who want to draw collaboratively on a shared canvas.',
+    languages: 'JavaScript, HTML, CSS',
+    tech: 'Node.js, Express.js, React, Redux, React-Redux, Socket.io, Canvas, Git',
+    image: 'images/concanvas-demo-image.png'
+  },
+  {
     name: 'TrackSlash Audio Ripper',
     url: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
     repo: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
@@ -77,6 +86,7 @@ const ProjectImage = styled.div`
   float: left;
   height: 250px;
   width: 400px;
+  border: 1px solid dimgrey;
   background-color: dimgrey;
   background-size: cover;
   background-repeat: no-repeat;
