@@ -79,7 +79,6 @@ const ProjectDemo = styled.div`
   margin: 30px 0;
   padding: 25px;
   height: 300px;
-  position: relative;
 `
 
 const ProjectImage = styled.div`
@@ -99,6 +98,7 @@ const DemoDetails = styled.div`
   float: left;
   padding: 0 25px;
   height: 250px;
+  position: relative;
 `
 
 const DemoTitle = styled.h3`
@@ -109,7 +109,7 @@ const DemoTitle = styled.h3`
 
 const DemoSubDescription = styled.div`
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
 `
 
 const DemoSubtitle = styled.span`
