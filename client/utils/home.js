@@ -79,6 +79,7 @@ const ProjectDemo = styled.div`
   margin: 30px 0;
   padding: 25px;
   height: 300px;
+  position: relative;
 `
 
 const ProjectImage = styled.div`
