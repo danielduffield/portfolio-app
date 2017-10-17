@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
 class NavBar extends React.Component {
   render() {
@@ -15,7 +16,8 @@ class NavBar extends React.Component {
                 <NavLink className="nav-link" href="#about">About</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
-                <NavLink className="nav-link" href="#resume">Resume</NavLink>
+                <NavLink className="nav-link" href="#resume"
+                  onClick={this.updateView} data-view="resume">Resume</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#projects">Projects</NavLink>
@@ -60,4 +62,12 @@ const OwnerName = styled.span`
   font-size: 1.5em;
 `
 
-export default NavBar
+function mapStateToProps(state) {
+  console.log('STATE: ', state)
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(NavBar)
+export default Connected
