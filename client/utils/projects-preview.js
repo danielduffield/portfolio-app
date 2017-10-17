@@ -9,7 +9,7 @@ class ProjectsPreview extends React.Component {
       <div className={this.props.view === 'projects' ? '' : 'hidden'}>
         <div className="row demo-projects-container">
           <div className="col-sm-10 col-sm-offset-1">
-            <div className="project-demos-container">
+            <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
                   <ProjectDemo key={index}>
@@ -33,13 +33,17 @@ class ProjectsPreview extends React.Component {
                   </ProjectDemo>
                 )
               })}
-            </div>
+            </ProjectDemosContainer>
           </div>
         </div>
       </div>
     )
   }
 }
+
+const ProjectDemosContainer = styled.div`
+  width: 100%;
+`
 
 const ProjectDemo = styled.div`
   margin: 30px 0;
