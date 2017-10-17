@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { Provider } from 'react-redux'
+import store from './utils/store.js'
 import App from './utils/app.js'
 
 const $root = document.getElementById('root')
@@ -9,9 +10,9 @@ render()
 
 function render() {
   ReactDOM.render(
-    <div>
+    <Provider store={store}>
       <App />
-    </div>,
+    </Provider>,
     $root
   )
 }
