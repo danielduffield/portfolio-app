@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
-export default class Resume extends React.Component {
+class Resume extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.view === 'resume' ? '' : 'hidden'}>
         <ResumeImage></ResumeImage>
       </div>
     )
@@ -20,3 +21,13 @@ const ResumeImage = styled.div`
   background-image: url('images/resume-image.png');
   margin: 0 auto;
 `
+
+function mapStateToProps(state) {
+  console.log('STATE: ', state)
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(Resume)
+export default Connected
