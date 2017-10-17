@@ -8,6 +8,7 @@ class NavBar extends React.Component {
     this.updateView = this.updateView.bind(this)
   }
   updateView(event) {
+    console.log(event.target.dataset.view)
     this.props.dispatch({
       type: 'UPDATED_VIEW',
       payload: {
@@ -32,7 +33,8 @@ class NavBar extends React.Component {
                   onClick={this.updateView} data-view="resume">Resume</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
-                <NavLink className="nav-link" href="#projects">Projects</NavLink>
+                <NavLink className="nav-link" href="#projects"
+                  onClick={this.updateView} data-view="projects">Projects</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#contact">Contact</NavLink>
