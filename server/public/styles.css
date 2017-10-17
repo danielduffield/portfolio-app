@@ -38,40 +38,6 @@
   font-size: 1.5em;
 }
 
-.splash-img {
-  top: 50px;
-  height: 641.88px;
-  width: 1840px;
-  position: absolute;
-  background-image: url("images/splash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  z-index: -1;
-}
-
-.splash-wrapper {
-  position: absolute;
-  height: 641.88px;
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.social-media-btns {
-  top: 50px;
-  height: 641.88px;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-}
-
-.social-btn {
-  top: 550px;
-  position: relative;
-  width: 35%;
-}
-
 .demo-projects-container {
   width: 100%;
 }
