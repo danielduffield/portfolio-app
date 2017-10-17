@@ -23,7 +23,10 @@ class NavBar extends React.Component {
           <NavBarContainer>
             <NavButtonContainer className="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
               <NavLinkContainer className="pull-left">
-                <OwnerName>Daniel Duffield</OwnerName>
+                <OwnerName>
+                  <NavLink className="nav-link" href="#home"
+                    onClick={this.updateView} data-view="home">Daniel Duffield</NavLink>
+                </OwnerName>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#about">About</NavLink>
