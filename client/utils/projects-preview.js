@@ -42,6 +42,7 @@ class ProjectsPreview extends React.Component {
 }
 
 const ProjectDemosContainer = styled.div`
+  margin-top: 50px;
   width: 100%;
 `
 
