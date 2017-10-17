@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 import projects from './projects-data'
 
-export default class ProjectsPreview extends React.Component {
+class ProjectsPreview extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.view === 'projects' ? '' : 'hidden'}>
         <div className="row demo-projects-container">
           <div className="col-sm-10 col-sm-offset-1">
             <div className="project-demos-container">
@@ -81,3 +82,13 @@ const DemoSubtitle = styled.span`
   font-size: 1.25em;
   margin-right: 10px;
 `
+
+function mapStateToProps(state) {
+  console.log('STATE: ', state)
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(ProjectsPreview)
+export default Connected
