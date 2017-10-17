@@ -13,13 +13,14 @@ class Resume extends React.Component {
 }
 
 const ResumeImage = styled.div`
+  position: relative;
   height: 956px;
   width: 809px;
   border: 1px solid grey;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('images/resume-image.png');
-  margin: 0 auto;
+  margin: 75px auto 50px;
 `
 
 function mapStateToProps(state) {
