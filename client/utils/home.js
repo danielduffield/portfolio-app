@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import ProjectsPreview from './projects-preview'
 import { connect } from 'react-redux'
 
 class Home extends React.Component {
@@ -22,7 +21,6 @@ class Home extends React.Component {
             </a>
           </div>
         </SocialMediaContainer>
-        <ProjectsPreview/>
       </div>
     )
   }
