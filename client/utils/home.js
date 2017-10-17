@@ -1,11 +1,12 @@
 import React from 'react'
 
 import ProjectsPreview from './projects-preview'
+import { connect } from 'react-redux'
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.view === 'home' ? '' : 'hidden'}>
         <div className="row">
           <div className="splash-wrapper">
             <div className="splash-img"></div>
@@ -26,3 +27,13 @@ export default class Home extends React.Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  console.log('STATE: ', state)
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(Home)
+export default Connected
