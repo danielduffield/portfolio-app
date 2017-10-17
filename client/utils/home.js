@@ -8,8 +8,8 @@ class Home extends React.Component {
     return (
       <div className={this.props.view === 'home' ? '' : 'hidden'}>
         <div className="row">
-          <SplashWrapper>
-            <SplashImage></SplashImage>
+          <SplashWrapper id="splash-wrapper">
+            <SplashImage id="splash-image"></SplashImage>
           </SplashWrapper>
         </div>
         <SocialMediaContainer className="row">
@@ -31,7 +31,7 @@ class Home extends React.Component {
 const SplashImage = styled.div`
   top: 50px;
   height: 641.88px;
-  width: 1840px;
+  width: 1855px;
   position: absolute;
   background-image: url("images/splash.jpg");
   background-size: cover;
