@@ -5,77 +5,14 @@
   font-family: 'Muli', sans-serif;
 }
 
-#nav-bar {
-  background-color: whitesmoke;
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-}
-
-.nav-button-container {
-  position: fixed;
-  height: 50px;
-}
-
-.nav-link-container {
-  line-height: 50px;
-  float: right;
-  font-size: 1.25em;
-  margin: 0 20px;
-}
-
-.nav-link {
+.demo-title-link:hover {
   text-decoration: none;
-  color: black;
 }
 
 .nav-link:hover {
   text-decoration: none;
 }
 
-#owner-name {
-  font-size: 1.5em;
-}
-
-.splash-img {
-  top: 50px;
-  height: 641.88px;
-  width: 1840px;
-  position: absolute;
-  background-image: url("images/splash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  z-index: -1;
-}
-
-.splash-wrapper {
-  position: absolute;
-  height: 641.88px;
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.social-media-btns {
-  top: 50px;
-  height: 641.88px;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-}
-
-.social-btn {
-  top: 550px;
-  position: relative;
-  width: 35%;
-}
-
-.demo-projects-container {
-  width: 100%;
-}
-
-.demo-title-link:hover {
+.nav-link:focus {
   text-decoration: none;
 }

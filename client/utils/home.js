@@ -1,28 +1,70 @@
 import React from 'react'
+import styled from 'styled-components'
+import { connect } from 'react-redux'
 
-import ProjectsPreview from './projects-preview'
-
-export default class Home extends React.Component {
+class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.view === 'home' ? '' : 'hidden'}>
         <div className="row">
-          <div className="splash-wrapper">
-            <div className="splash-img"></div>
-          </div>
+          <SplashWrapper id="splash-wrapper">
+            <SplashImage id="splash-image"></SplashImage>
+          </SplashWrapper>
         </div>
-        <div className="row social-media-btns">
+        <SocialMediaContainer className="row">
           <div className="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4">
             <a href="https://github.com/danielduffield/" target="_blank" rel="noopener noreferrer">
-              <button className="btn btn-default social-btn pull-left">Github</button>
+              <SocialMediaButton className="btn btn-default pull-left">Github</SocialMediaButton>
             </a>
             <a href="https://www.linkedin.com/in/daniel-duffield-3ab35b66/" target="_blank" rel="noopener noreferrer">
-              <button className="btn btn-default social-btn pull-right">LinkedIn</button>
+              <SocialMediaButton className="btn btn-default pull-right">LinkedIn</SocialMediaButton>
             </a>
           </div>
-        </div>
-        <ProjectsPreview/>
+        </SocialMediaContainer>
       </div>
     )
   }
 }
+
+const SplashImage = styled.div`
+  top: 50px;
+  height: 550px;
+  width: 1855px;
+  position: absolute;
+  background-image: url("images/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  z-index: -1;
+`
+const SplashWrapper = styled.div`
+  position: absolute;
+  height: 550px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+`
+
+const SocialMediaContainer = styled.div`
+  top: 50px;
+  height: 550px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+`
+
+const SocialMediaButton = styled.button`
+  top: 450px;
+  position: relative;
+  width: 35%;
+`
+
+function mapStateToProps(state) {
+  console.log('STATE: ', state)
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(Home)
+export default Connected

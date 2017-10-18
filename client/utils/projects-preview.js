@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 import projects from './projects-data'
 
-export default class ProjectsPreview extends React.Component {
+class ProjectsPreview extends React.Component {
   render() {
     return (
-      <div>
+      <div className={this.props.view === 'home' || this.props.view === 'projects' ? '' : 'hidden'}>
         <div className="row demo-projects-container">
           <div className="col-sm-10 col-sm-offset-1">
-            <div className="project-demos-container">
+            <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
                   <ProjectDemo key={index}>
@@ -32,13 +33,18 @@ export default class ProjectsPreview extends React.Component {
                   </ProjectDemo>
                 )
               })}
-            </div>
+            </ProjectDemosContainer>
           </div>
         </div>
       </div>
     )
   }
 }
+
+const ProjectDemosContainer = styled.div`
+  margin-top: 50px;
+  width: 100%;
+`
 
 const ProjectDemo = styled.div`
   margin: 30px 0;
@@ -81,3 +87,12 @@ const DemoSubtitle = styled.span`
   font-size: 1.25em;
   margin-right: 10px;
 `
+
+function mapStateToProps(state) {
+  return {
+    view: state.view
+  }
+}
+
+const Connected = connect(mapStateToProps)(ProjectsPreview)
+export default Connected
