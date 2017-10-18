@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 class Resume extends React.Component {
   render() {
     return (
-      <div className="row">
-        <ResumeWrapper className={this.props.view === 'resume' ? '' : 'hidden'}>
+      <div className={'row' + (this.props.view === 'resume' ? '' : ' hidden')}>
+        <ResumeWrapper>
           <ResumeImage></ResumeImage>
         </ResumeWrapper>
       </div>
@@ -25,6 +25,7 @@ const ResumeWrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
+  z-index: 0;
 `
 
 const ResumeImage = styled.div`
@@ -36,6 +37,7 @@ const ResumeImage = styled.div`
   background-size: contain;
   background-image: url('images/resume-image.png');
   margin: 75px auto 50px;
+  z-index: 10;
 `
 
 function mapStateToProps(state) {
