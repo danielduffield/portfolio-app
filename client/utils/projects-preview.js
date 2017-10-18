@@ -6,7 +6,7 @@ import projects from './projects-data'
 class ProjectsPreview extends React.Component {
   render() {
     return (
-      <div className={this.props.view === 'projects' ? '' : 'hidden'}>
+      <div className={this.props.view === 'home' || this.props.view === 'projects' ? '' : 'hidden'}>
         <div className="row demo-projects-container">
           <div className="col-sm-10 col-sm-offset-1">
             <ProjectDemosContainer>
