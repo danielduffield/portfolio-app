@@ -6,18 +6,17 @@ class Resume extends React.Component {
   render() {
     return (
       <div className={'row' + (this.props.view === 'resume' ? '' : ' hidden')}>
-        <ResumeWrapper className="col-sm-12">
-          <ResumeImage></ResumeImage>
-        </ResumeWrapper>
+        <ResumeSplash className="col-sm-12"></ResumeSplash>
+        <ResumeImage></ResumeImage>
       </div>
     )
   }
 }
 
-const ResumeWrapper = styled.div`
+const ResumeSplash = styled.div`
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 50px;
   background-image: url('images/resume-splash.jpg');
   background-size: cover;
@@ -27,6 +26,7 @@ const ResumeWrapper = styled.div`
 
 const ResumeImage = styled.div`
   position: relative;
+  top: 50px;
   height: 956px;
   width: 809px;
   border: 1px solid grey;
