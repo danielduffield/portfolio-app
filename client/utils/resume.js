@@ -5,12 +5,27 @@ import { connect } from 'react-redux'
 class Resume extends React.Component {
   render() {
     return (
-      <div className={this.props.view === 'resume' ? '' : 'hidden'}>
-        <ResumeImage></ResumeImage>
+      <div className="row">
+        <ResumeWrapper className={this.props.view === 'resume' ? '' : 'hidden'}>
+          <ResumeImage></ResumeImage>
+        </ResumeWrapper>
       </div>
     )
   }
 }
+
+const ResumeWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  top: 50px;
+  position: fixed;
+  overflow-y: scroll;
+  background-image: url('images/resume-splash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+`
 
 const ResumeImage = styled.div`
   position: relative;
