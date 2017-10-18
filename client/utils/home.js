@@ -28,7 +28,7 @@ class Home extends React.Component {
 
 const SplashImage = styled.div`
   top: 50px;
-  height: 641.88px;
+  height: 550px;
   width: 1855px;
   position: absolute;
   background-image: url("images/splash.jpg");
@@ -39,7 +39,7 @@ const SplashImage = styled.div`
 `
 const SplashWrapper = styled.div`
   position: absolute;
-  height: 641.88px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
@@ -47,14 +47,14 @@ const SplashWrapper = styled.div`
 
 const SocialMediaContainer = styled.div`
   top: 50px;
-  height: 641.88px;
+  height: 550px;
   text-align: center;
   width: 100%;
   z-index: 1;
 `
 
 const SocialMediaButton = styled.button`
-  top: 550px;
+  top: 450px;
   position: relative;
   width: 35%;
 `
