@@ -12,3 +12,7 @@
 .nav-link:hover {
   text-decoration: none;
 }
+
+.nav-link:focus {
+  text-decoration: none;
+}
