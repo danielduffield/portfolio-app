@@ -6,7 +6,7 @@ class Resume extends React.Component {
   render() {
     return (
       <div className={'row' + (this.props.view === 'resume' ? '' : ' hidden')}>
-        <ResumeWrapper>
+        <ResumeWrapper className="col-sm-12">
           <ResumeImage></ResumeImage>
         </ResumeWrapper>
       </div>
@@ -17,15 +17,12 @@ class Resume extends React.Component {
 const ResumeWrapper = styled.div`
   height: 100%;
   width: 100%;
+  position: absolute;
   top: 50px;
-  position: fixed;
-  overflow-y: scroll;
   background-image: url('images/resume-splash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
-  z-index: 0;
 `
 
 const ResumeImage = styled.div`
@@ -36,8 +33,7 @@ const ResumeImage = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('images/resume-image.png');
-  margin: 75px auto 50px;
-  z-index: 10;
+  margin: 50px auto;
 `
 
 function mapStateToProps(state) {
