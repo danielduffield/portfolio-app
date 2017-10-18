@@ -7,7 +7,8 @@ class Resume extends React.Component {
     return (
       <div className={'row' + (this.props.view === 'resume' ? '' : ' hidden')}>
         <ResumeSplash className="col-sm-12"></ResumeSplash>
-        <ResumeImage></ResumeImage>
+        <DarkeningLayer />
+        <ResumeImage />
       </div>
     )
   }
@@ -24,12 +25,19 @@ const ResumeSplash = styled.div`
   background-repeat: no-repeat;
 `
 
+const DarkeningLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+`
+
 const ResumeImage = styled.div`
   position: relative;
   top: 50px;
   height: 956px;
   width: 809px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('images/resume-image.png');
