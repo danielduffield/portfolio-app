@@ -60,7 +60,6 @@ const SocialMediaButton = styled.button`
 `
 
 function mapStateToProps(state) {
-  console.log('STATE: ', state)
   return {
     view: state.view
   }
