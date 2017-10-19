@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import NavBar from './nav-bar.js'
 import Home from './home.js'
+import About from './about.js'
 import Resume from './resume.js'
 import ProjectsPreview from './projects-preview.js'
 
@@ -35,6 +36,7 @@ class App extends React.Component {
       <div id="app-container">
         <NavBar />
         <Home />
+        <About />
         <Resume />
         <ProjectsPreview />
       </div>
