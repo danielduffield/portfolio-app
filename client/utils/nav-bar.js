@@ -3,19 +3,6 @@ import styled from 'styled-components'
 import { connect } from 'react-redux'
 
 class NavBar extends React.Component {
-  constructor(props) {
-    super(props)
-    this.updateView = this.updateView.bind(this)
-  }
-  updateView(event) {
-    console.log(event.target.dataset.view)
-    this.props.dispatch({
-      type: 'UPDATED_VIEW',
-      payload: {
-        text: event.target.dataset.view
-      }
-    })
-  }
   render() {
     return (
       <div className="row">
@@ -25,7 +12,7 @@ class NavBar extends React.Component {
               <NavLinkContainer className="pull-left">
                 <OwnerName>
                   <NavLink className="nav-link" href="#home"
-                    onClick={this.updateView} data-view="home">Daniel Duffield</NavLink>
+                    data-view="home">Daniel Duffield</NavLink>
                 </OwnerName>
               </NavLinkContainer>
               <NavLinkContainer>
@@ -33,11 +20,11 @@ class NavBar extends React.Component {
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#resume"
-                  onClick={this.updateView} data-view="resume">Resume</NavLink>
+                  data-view="resume">Resume</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#projects"
-                  onClick={this.updateView} data-view="projects">Projects</NavLink>
+                  data-view="projects">Projects</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#contact">Contact</NavLink>
