@@ -16,7 +16,7 @@ class NavBar extends React.Component {
                 </OwnerName>
               </NavLinkContainer>
               <NavLinkContainer>
-                <NavLink className="nav-link" href="#about">About</NavLink>
+                <NavLink className="nav-link" href="#contact">Contact</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
                 <NavLink className="nav-link" href="#resume"
@@ -27,7 +27,7 @@ class NavBar extends React.Component {
                   data-view="projects">Projects</NavLink>
               </NavLinkContainer>
               <NavLinkContainer>
-                <NavLink className="nav-link" href="#contact">Contact</NavLink>
+                <NavLink className="nav-link" href="#about">About</NavLink>
               </NavLinkContainer>
             </NavButtonContainer>
           </NavBarContainer>
