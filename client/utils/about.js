@@ -9,14 +9,20 @@ class About extends React.Component {
         <AboutSplash></AboutSplash>
         <DarkeningLayer />
         <AboutWrapper className="col-sm-8 col-sm-offset-2">
-          <AboutTitleContainer>
-            <AboutTitle>About</AboutTitle>
-          </AboutTitleContainer>
           <AboutImage></AboutImage>
           <AboutDetails>
             <AboutDescription>
-              <p>All work and no play makes Daniel a good programmer. All work and no play makes Daniel a good programmer.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>{'My name is Daniel Duffield, and I’m a full-stack JavaScript developer with a passion for solving logical puzzles in the shape of building, refactoring, and debugging software.'}</p>
+              <p>{'In the development of my personal projects, I\'ve accomplished the following:'}</p>
+              <AboutPoints>
+                <li>Wielded vanilla.JS, Es6 syntax and features, and CommonJS modular code structure.</li>
+                <li>Leveraged frameworks and libraries such as React paired with Redux.</li>
+                <li>Managed databases using SQL, Postgres, and Knex.</li>
+                <li>Implemented testing using Mocha and Chai, using nyc for code coverage reports.</li>
+                <li>Studied and applied techniques of functional, object-oriented, and procedural programming.</li>
+                <li>Maintained code version control using Git with consistent deployment to Github.</li>
+              </AboutPoints>
+              <p>If you have any questions, feedback, or information regarding an employment opportunity, please feel free to reach out to me on LinkedIn or via email at .</p>
             </AboutDescription>
           </AboutDetails>
         </AboutWrapper>
@@ -28,12 +34,19 @@ class About extends React.Component {
 const AboutDetails = styled.span`
   padding: 50px 50px 50px 0;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.15em;
+`
+
+const AboutPoints = styled.ul`
+  position: relative;
+  left: 25px;
+  padding-right: 25px;
 `
 
 const AboutDescription = styled.div`
   width: 100% - 400px;
   padding-right: 50px;
+  padding-top: 10px;
   height: 100%;
   position: absolute;
 `
@@ -59,19 +72,9 @@ const DarkeningLayer = styled.div`
 const AboutWrapper = styled.div`
   background-color: rgba(250, 250, 250, 0.9);
   position: relative;
-  top: 100px;
-  height: 500px;
+  top: 200px;
+  height: 400px;
   padding: 0;
-`
-
-const AboutTitleContainer = styled.div`
-  height: 100px;
-  text-align: center;
-`
-
-const AboutTitle = styled.span`
-  line-height: 100px;
-  font-size: 2.5em;
 `
 
 const AboutImage = styled.div`
