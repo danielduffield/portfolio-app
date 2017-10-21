@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import { connect } from 'react-redux'
 
 class Contact extends React.Component {
+  constructor(props) {
+    super(props)
+    this.updateInput = this.updateInput.bind(this)
+  }
+  updateInput(event) {
+    this.props.dispatch({
+      type: 'UPDATED_CONTACT_INPUT',
+      payload: {
+        text: event.target.value
+      }
+    })
+  }
   render() {
     return (
       <div id="about-section" className={'row' + (this.props.view === 'contact' ? '' : ' hidden')}>
@@ -19,7 +31,7 @@ class Contact extends React.Component {
             </DescriptionWrapper>
             <ContactForm>
               <InputWrapper>
-                <ContactInput />
+                <ContactInput value={this.props.inputContents} onChange={this.updateInput}/>
               </InputWrapper>
               <SubmitButton className="btn btn-default">Submit</SubmitButton>
             </ContactForm>
