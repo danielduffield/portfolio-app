@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 
-class About extends React.Component {
+class Contact extends React.Component {
   render() {
     return (
       <div id="about-section" className={'row' + (this.props.view === 'contact' ? '' : ' hidden')}>
@@ -97,5 +97,5 @@ function mapStateToProps(state) {
   }
 }
 
-const Connected = connect(mapStateToProps)(About)
+const Connected = connect(mapStateToProps)(Contact)
 export default Connected
