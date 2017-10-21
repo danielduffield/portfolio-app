@@ -13,7 +13,7 @@ function reducer(state = {
     case 'HASH_CHANGED':
       const parsed = parseHash(action.payload.hash)
       return Object.assign({}, state, { view: (parsed || state.view) })
-    case 'TOGGLD_CONTACT_SUGGESTION':
+    case 'TOGGLED_CONTACT_SUGGESTION':
       return Object.assign({}, state, { contact:
         {
           input: state.contact.input,
