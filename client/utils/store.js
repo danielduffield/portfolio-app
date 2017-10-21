@@ -20,6 +20,13 @@ function reducer(state = {
           selected: action.payload.selected
         }
       })
+    case 'UPDATED_CONTACT_INPUT':
+      return Object.assign({}, state, { contact:
+        {
+          input: action.payload.text,
+          selected: state.contact.selected
+        }
+      })
     default:
       return state
   }
