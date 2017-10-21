@@ -91,7 +91,9 @@ const DarkeningLayer = styled.div`
 
 function mapStateToProps(state) {
   return {
-    view: state.view
+    view: state.view,
+    inputContents: state.contact.input,
+    selected: state.contact.selected
   }
 }
 
