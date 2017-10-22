@@ -6,6 +6,16 @@ class Contact extends React.Component {
   constructor(props) {
     super(props)
     this.updateInput = this.updateInput.bind(this)
+    this.toggleSelected = this.toggleSelected.bind(this)
+  }
+  toggleSelected(event) {
+    const selected = event.target.dataset.topic === this.props.selected
+      ? ''
+      : event.target.dataset.topic
+    this.props.dispatch({
+      type: 'TOGGLED_CONTACT_SUGGESTION',
+      payload: { selected }
+    })
   }
   updateInput(event) {
     this.props.dispatch({
@@ -24,9 +34,12 @@ class Contact extends React.Component {
           <FormWrapper>
             <DescriptionWrapper>
               <div>If you have any</div>
-              <ContactQueryLink className="btn btn-default col-sm-4">questions</ContactQueryLink>
-              <ContactQueryLink className="btn btn-default col-sm-4">feedback</ContactQueryLink>
-              <ContactQueryLink className="btn btn-default col-sm-4">job info</ContactQueryLink>
+              <ContactQueryLink className="btn btn-default col-sm-4"
+                data-topic="questions" onClick={this.toggleSelected}>questions</ContactQueryLink>
+              <ContactQueryLink className="btn btn-default col-sm-4"
+                data-topic="feedback" onClick={this.toggleSelected}>feedback</ContactQueryLink>
+              <ContactQueryLink className="btn btn-default col-sm-4"
+                data-topic="job" onClick={this.toggleSelected}>job info</ContactQueryLink>
               <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or via the form below.</p>
             </DescriptionWrapper>
             <ContactForm>
