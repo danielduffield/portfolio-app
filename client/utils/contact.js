@@ -7,6 +7,7 @@ class Contact extends React.Component {
     super(props)
     this.updateInput = this.updateInput.bind(this)
     this.toggleSelected = this.toggleSelected.bind(this)
+    this.handleSubmission = this.handleSubmission.bind(this)
   }
   toggleSelected(event) {
     const selected = event.target.dataset.topic === this.props.selected
@@ -25,6 +26,10 @@ class Contact extends React.Component {
       }
     })
   }
+  handleSubmission(event) {
+    event.preventDefault()
+    console.log('SUBMITTED')
+  }
   render() {
     return (
       <div id="about-section" className={'row' + (this.props.view === 'contact' ? '' : ' hidden')}>
@@ -42,7 +47,7 @@ class Contact extends React.Component {
                 data-topic="feedback" onClick={this.toggleSelected}>feedback</ContactQueryLink>
               <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or by using the form below.</p>
             </DescriptionWrapper>
-            <ContactForm>
+            <ContactForm onSubmit={this.handleSubmission}>
               <div>
                 <ContactInput value={this.props.inputContents} onChange={this.updateInput}/>
               </div>
