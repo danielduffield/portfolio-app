@@ -14,9 +14,10 @@ function reducer(state = {
       const parsed = parseHash(action.payload.hash)
       return Object.assign({}, state, { view: (parsed || state.view) })
     case 'TOGGLED_CONTACT_SUGGESTION':
+      const input = suggestInput(action.payload.selected)
       return Object.assign({}, state, { contact:
         {
-          input: state.contact.input,
+          input,
           selected: action.payload.selected
         }
       })
@@ -24,7 +25,7 @@ function reducer(state = {
       return Object.assign({}, state, { contact:
         {
           input: action.payload.text,
-          selected: state.contact.selected
+          selected: ''
         }
       })
     default:
@@ -41,6 +42,19 @@ function parseHash(url) {
     }
   })
   return parsed || 'home'
+}
+
+function suggestInput(selected) {
+  switch (selected) {
+    case 'questions':
+      return 'I have a question with regards to '
+    case 'feedback':
+      return 'I\'d like to offer some feedback regarding '
+    case 'job':
+      return 'I have an employment opportunity that you may be interested in.'
+    default:
+      return ''
+  }
 }
 
 export default createStore(reducer)
