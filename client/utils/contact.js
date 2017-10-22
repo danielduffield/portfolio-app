@@ -39,8 +39,8 @@ class Contact extends React.Component {
               <ContactQueryLink className={'btn btn-default col-sm-4' + (this.props.selected === 'feedback' ? ' btn-primary' : '')}
                 data-topic="feedback" onClick={this.toggleSelected}>feedback</ContactQueryLink>
               <ContactQueryLink className={'btn btn-default col-sm-4' + (this.props.selected === 'job' ? ' btn-primary' : '')}
-                data-topic="job" onClick={this.toggleSelected}>job info</ContactQueryLink>
-              <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or via the form below.</p>
+                data-topic="job" onClick={this.toggleSelected}>opportunities</ContactQueryLink>
+              <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or by using the form below.</p>
             </DescriptionWrapper>
             <ContactForm>
               <div>
