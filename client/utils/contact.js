@@ -28,7 +28,14 @@ class Contact extends React.Component {
   }
   handleSubmission(event) {
     event.preventDefault()
-    console.log('SUBMITTED')
+    fetch('/contact-submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ text: this.props.inputContents })
+    }).then(response => console.log(response))
   }
   render() {
     return (
