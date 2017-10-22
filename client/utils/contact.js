@@ -23,16 +23,16 @@ class Contact extends React.Component {
         <ContactWrapper className="col-sm-6 col-sm-offset-3">
           <FormWrapper>
             <DescriptionWrapper>
-              <div>If you have any:</div>
+              <div>If you have any</div>
               <ContactQueryLink className="btn btn-default col-sm-4">questions</ContactQueryLink>
               <ContactQueryLink className="btn btn-default col-sm-4">feedback</ContactQueryLink>
               <ContactQueryLink className="btn btn-default col-sm-4">job info</ContactQueryLink>
-              <p>or exceptional cases, please feel free to reach out to me on LinkedIn, via email, or via the form below.</p>
+              <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or via the form below.</p>
             </DescriptionWrapper>
             <ContactForm>
-              <InputWrapper>
+              <div>
                 <ContactInput value={this.props.inputContents} onChange={this.updateInput}/>
-              </InputWrapper>
+              </div>
               <SubmitButton className="btn btn-default">Submit</SubmitButton>
             </ContactForm>
           </FormWrapper>
@@ -53,10 +53,6 @@ const DescriptionWrapper = styled.div`
   font-size: 1.15em;
 `
 
-const InputWrapper = styled.div`
-
-`
-
 const FormWrapper = styled.div`
   text-align: center;
 `
@@ -73,6 +69,7 @@ const ContactInput = styled.textarea`
   height: 200px;
   width: 500px;
   resize: none;
+  padding: 10px;
 `
 
 const ContactWrapper = styled.div`
