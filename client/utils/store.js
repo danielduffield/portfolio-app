@@ -12,7 +12,14 @@ function reducer(state = {
       return Object.assign({}, state, { view: action.payload.text })
     case 'HASH_CHANGED':
       const parsed = parseHash(action.payload.hash)
-      return Object.assign({}, state, { view: (parsed || state.view) })
+      return Object.assign({}, state,
+        {
+          view: (parsed || state.view),
+          contact: {
+            input: '',
+            selected: ''
+          }
+        })
     case 'TOGGLED_CONTACT_SUGGESTION':
       const input = suggestInput(action.payload.selected)
       return Object.assign({}, state, { contact:
