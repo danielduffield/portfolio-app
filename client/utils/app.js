@@ -6,6 +6,7 @@ import Home from './home.js'
 import About from './about.js'
 import Resume from './resume.js'
 import ProjectsPreview from './projects-preview.js'
+import Contact from './contact.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends React.Component {
         <About />
         <Resume />
         <ProjectsPreview />
+        <Contact />
       </div>
     )
   }
