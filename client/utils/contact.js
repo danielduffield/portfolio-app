@@ -52,7 +52,11 @@ class Contact extends React.Component {
                 data-topic="job" onClick={this.toggleSelected}>opportunities</ContactQueryLink>
               <ContactQueryLink className={'btn btn-default col-sm-4' + (this.props.selected === 'feedback' ? ' btn-primary' : '')}
                 data-topic="feedback" onClick={this.toggleSelected}>feedback</ContactQueryLink>
-              <p>or something more specific, please feel free to reach out to me on LinkedIn, via email, or by using the form below.</p>
+              <p>{'Please feel free to reach out to me on '}
+                <a href="https://www.linkedin.com/in/daniel-duffield-3ab35b66/" target="_blank" rel="noopener noreferrer">LinkedIn</a>{', via '}
+                <a href="mailto:danieljduffield@gmail.com">email</a>,
+                or by using the form below.
+              </p>
             </DescriptionWrapper>
             <ContactForm onSubmit={this.handleSubmission}>
               <div>
