@@ -10,7 +10,12 @@ class Home extends React.Component {
           <SplashWrapper id="splash-wrapper">
             <SplashImage id="splash-image"></SplashImage>
           </SplashWrapper>
+          <TitleWrapper>
+            <HomeTitle>Daniel Duffield</HomeTitle>
+            <HomeSubtitle>Full-Stack Software Developer</HomeSubtitle>
+          </TitleWrapper>
         </div>
+
         <SocialMediaContainer className="row">
           <div className="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4">
             <a href="https://github.com/danielduffield/" target="_blank" rel="noopener noreferrer">
@@ -25,6 +30,21 @@ class Home extends React.Component {
     )
   }
 }
+
+const TitleWrapper = styled.div`
+  position: relative;
+  top: 200px;
+  text-align: center;
+  color: white;
+`
+
+const HomeTitle = styled.h3`
+  font-size: 4em;
+`
+
+const HomeSubtitle = styled.span`
+  font-size: 2.5em;
+`
 
 const SplashImage = styled.div`
   top: 50px;
@@ -46,10 +66,8 @@ const SplashWrapper = styled.div`
 `
 
 const SocialMediaContainer = styled.div`
-  top: 50px;
   height: 550px;
   text-align: center;
-  width: 100%;
   z-index: 1;
 `
 
