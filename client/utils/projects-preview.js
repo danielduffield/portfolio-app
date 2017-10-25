@@ -9,6 +9,9 @@ class ProjectsPreview extends React.Component {
       <div className={this.props.view === 'home' || this.props.view === 'projects' ? '' : 'hidden'}>
         <div className="row demo-projects-container">
           <div className="col-sm-10 col-sm-offset-1">
+            <HeadingWrapper>
+              <ProjectsTitle>Projects</ProjectsTitle>
+            </HeadingWrapper>
             <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
@@ -40,6 +43,16 @@ class ProjectsPreview extends React.Component {
     )
   }
 }
+
+const HeadingWrapper = styled.div`
+  text-align: center;
+  top: 50px;
+  position: relative;
+`
+
+const ProjectsTitle = styled.h3`
+  font-size: 3em;
+`
 
 const ProjectDemosContainer = styled.div`
   margin-top: 50px;
