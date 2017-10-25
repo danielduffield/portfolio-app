@@ -12,7 +12,7 @@ class NavBar extends React.Component {
               <NavLinkContainer className="pull-left">
                 <OwnerName>
                   <NavLink className="nav-link" href="#home"
-                    data-view="home">Daniel Duffield</NavLink>
+                    data-view="home">Home</NavLink>
                 </OwnerName>
               </NavLinkContainer>
               <NavLinkContainer>
@@ -63,7 +63,7 @@ const NavLink = styled.a`
 `
 
 const OwnerName = styled.span`
-  font-size: 1.5em;
+  font-size: 1.25em;
 `
 
 function mapStateToProps(state) {
