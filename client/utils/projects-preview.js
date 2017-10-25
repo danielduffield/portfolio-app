@@ -11,6 +11,7 @@ class ProjectsPreview extends React.Component {
           <div className="col-sm-10 col-sm-offset-1">
             <HeadingWrapper>
               <ProjectsTitle>Projects</ProjectsTitle>
+              <TitleRule />
             </HeadingWrapper>
             <ProjectDemosContainer>
               {projects.map((project, index) => {
@@ -44,6 +45,12 @@ class ProjectsPreview extends React.Component {
   }
 }
 
+const TitleRule = styled.hr`
+  width: 300px;
+  margin: 0 auto;
+  border-color: black;
+`
+
 const HeadingWrapper = styled.div`
   text-align: center;
   top: 50px;
@@ -55,7 +62,7 @@ const ProjectsTitle = styled.h3`
 `
 
 const ProjectDemosContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 75px;
   width: 100%;
 `
 
