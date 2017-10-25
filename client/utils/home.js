@@ -67,7 +67,7 @@ const SplashWrapper = styled.div`
   height: 550px;
   width: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 `
 
 const SocialMediaContainer = styled.div`
