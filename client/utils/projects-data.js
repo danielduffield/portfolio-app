@@ -9,15 +9,6 @@ const projects = [
     image: 'images/concanvas-demo-image.png'
   },
   {
-    name: 'TrackSlash Audio Ripper',
-    url: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
-    repo: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
-    description: 'A web app for music fans who want to slice audio from a Youtube video into tracks for download.',
-    languages: 'JavaScript, HTML, CSS',
-    tech: 'Node.js, Express.js, Socket.io, Bootstrap, RESTful API, Git',
-    image: 'images/trackslash-demo-image.png'
-  },
-  {
     name: 'Codewars Solutions',
     url: 'https://codewars-solutions.herokuapp.com',
     repo: 'https://www.github.com/danielduffield/codewars-solutions',
@@ -25,6 +16,15 @@ const projects = [
     languages: 'JavaScript, SQL, HTML, CSS',
     tech: 'Node.js, Express.js, React, Redux, Socket.io, Postgres, Bootstrap',
     image: 'images/codewars-demo-image.png'
+  },
+  {
+    name: 'TrackSlash Audio Ripper',
+    url: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
+    repo: 'https://www.github.com/danielduffield/trackslash-audio-ripper',
+    description: 'A web app for music fans who want to slice audio from a Youtube video into tracks for download.',
+    languages: 'JavaScript, HTML, CSS',
+    tech: 'Node.js, Express.js, Socket.io, Bootstrap, RESTful API, Git',
+    image: 'images/trackslash-demo-image.png'
   }
 ]
 
