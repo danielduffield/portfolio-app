@@ -13,9 +13,9 @@ class Home extends React.Component {
           <TitleWrapper>
             <HomeTitle>Daniel Duffield</HomeTitle>
             <HomeSubtitle>Full-Stack Software Developer</HomeSubtitle>
+            <TitleRule />
           </TitleWrapper>
         </div>
-
         <SocialMediaContainer className="row">
           <div className="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4">
             <a href="https://github.com/danielduffield/" target="_blank" rel="noopener noreferrer">
@@ -30,6 +30,11 @@ class Home extends React.Component {
     )
   }
 }
+
+const TitleRule = styled.hr`
+  width: 600px;
+  margin: 0 auto;
+`
 
 const TitleWrapper = styled.div`
   position: relative;
