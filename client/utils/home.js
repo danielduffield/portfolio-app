@@ -38,7 +38,7 @@ const TitleRule = styled.hr`
 
 const TitleWrapper = styled.div`
   position: relative;
-  top: 200px;
+  top: 175px;
   text-align: center;
   color: white;
 `
@@ -77,7 +77,7 @@ const SocialMediaContainer = styled.div`
 `
 
 const SocialMediaButton = styled.button`
-  top: 250px;
+  top: 200px;
   position: relative;
   width: 35%;
 `
