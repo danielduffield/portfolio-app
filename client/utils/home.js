@@ -72,7 +72,7 @@ const SocialMediaContainer = styled.div`
 `
 
 const SocialMediaButton = styled.button`
-  top: 450px;
+  top: 250px;
   position: relative;
   width: 35%;
 `
