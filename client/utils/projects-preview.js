@@ -16,14 +16,14 @@ class ProjectsPreview extends React.Component {
             <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
-                  <ProjectDemo key={index}>
+                  <ProjectDemo key={index} className={index % 2 !== 0 ? 'dark-row' : ''}>
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <ProjectImage url={project.image} className={index % 2 === 0 ? 'pull-right' : ''}></ProjectImage>
+                      <ProjectImage url={project.image} className={index % 2 !== 0 ? 'pull-right' : ''}></ProjectImage>
                     </a>
                     <DetailsWrapper>
                       <DemoDetails>
                         <a className="demo-title-link" href={project.url} target="_blank" rel="noopener noreferrer">
-                          <DemoTitle>{project.name}</DemoTitle>
+                          <DemoTitle color={index % 2 !== 0 ? 'white' : 'black'}>{project.name}</DemoTitle>
                         </a>
                         <p>{project.description}</p>
                         <DemoSubDescription>
@@ -102,7 +102,7 @@ const DemoDetails = styled.div`
 const DemoTitle = styled.h3`
   font-size: 1.75em;
   text-decoration: none;
-  color: black;
+  color: ${props => props.color};
 `
 
 const DemoSubDescription = styled.div`
