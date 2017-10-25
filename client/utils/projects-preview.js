@@ -76,7 +76,7 @@ const ProjectDemo = styled.div`
   margin: 30px 0;
   padding: 25px;
   height: 300px;
-  border: 1px solid black;
+  border: 2px solid #e9ece5;
 `
 
 const ProjectImage = styled.div`
