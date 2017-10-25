@@ -71,7 +71,7 @@ const SplashWrapper = styled.div`
 `
 
 const SocialMediaContainer = styled.div`
-  height: 550px;
+  height: 400px;
   text-align: center;
   z-index: 1;
 `
