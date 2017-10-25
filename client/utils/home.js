@@ -10,6 +10,11 @@ class Home extends React.Component {
           <SplashWrapper id="splash-wrapper">
             <SplashImage id="splash-image"></SplashImage>
           </SplashWrapper>
+          <TitleWrapper>
+            <HomeTitle>Daniel Duffield</HomeTitle>
+            <HomeSubtitle>Full-Stack Software Developer</HomeSubtitle>
+            <TitleRule />
+          </TitleWrapper>
         </div>
         <SocialMediaContainer className="row">
           <div className="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4">
@@ -25,6 +30,26 @@ class Home extends React.Component {
     )
   }
 }
+
+const TitleRule = styled.hr`
+  width: 600px;
+  margin: 0 auto;
+`
+
+const TitleWrapper = styled.div`
+  position: relative;
+  top: 175px;
+  text-align: center;
+  color: white;
+`
+
+const HomeTitle = styled.h3`
+  font-size: 4.5em;
+`
+
+const HomeSubtitle = styled.span`
+  font-size: 2.5em;
+`
 
 const SplashImage = styled.div`
   top: 50px;
@@ -42,19 +67,17 @@ const SplashWrapper = styled.div`
   height: 550px;
   width: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 `
 
 const SocialMediaContainer = styled.div`
-  top: 50px;
-  height: 550px;
+  height: 400px;
   text-align: center;
-  width: 100%;
   z-index: 1;
 `
 
 const SocialMediaButton = styled.button`
-  top: 450px;
+  top: 200px;
   position: relative;
   width: 35%;
 `
