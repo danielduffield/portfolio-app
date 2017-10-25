@@ -44,7 +44,7 @@ const TitleWrapper = styled.div`
 `
 
 const HomeTitle = styled.h3`
-  font-size: 4em;
+  font-size: 4.5em;
 `
 
 const HomeSubtitle = styled.span`
