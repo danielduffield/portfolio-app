@@ -16,8 +16,3 @@
 .nav-link:focus {
   text-decoration: none;
 }
-
-.dark-row {
-  background-color: #3b3a36;
-  color: white;
-}
