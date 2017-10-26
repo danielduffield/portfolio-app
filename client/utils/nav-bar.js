@@ -43,6 +43,7 @@ const NavBarContainer = styled.div`
   width: 100%;
   position: fixed;
   z-index: 1;
+  border-bottom: 1px solid lightgrey;
 `
 
 const NavLinkContainer = styled.span`
