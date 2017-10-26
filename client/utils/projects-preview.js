@@ -16,7 +16,7 @@ class ProjectsPreview extends React.Component {
             <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
-                  <ProjectDemo key={index} className={index % 2 !== 0 ? 'dark-row' : ''}>
+                  <ProjectDemo key={index} bgColor={index % 2 !== 0 ? '#3b3a36' : 'white'} color={index % 2 !== 0 ? 'white' : 'currentcolor'}>
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       <ProjectImage url={project.image} className={index % 2 !== 0 ? 'pull-right' : ''}></ProjectImage>
                     </a>
@@ -77,6 +77,8 @@ const ProjectDemo = styled.div`
   padding: 25px;
   height: 300px;
   border: 2px solid #e9ece5;
+  background-color: ${props => props.bgColor};
+  color: ${props => props.color};
 `
 
 const ProjectImage = styled.div`
