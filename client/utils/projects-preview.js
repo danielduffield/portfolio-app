@@ -7,7 +7,7 @@ class ProjectsPreview extends React.Component {
   render() {
     return (
       <div className={this.props.view === 'home' || this.props.view === 'projects' ? '' : 'hidden'}>
-        <div className="row demo-projects-container">
+        <div className="row">
           <div className="col-sm-8 col-sm-offset-2">
             <HeadingWrapper>
               <ProjectsTitle>Projects</ProjectsTitle>
