@@ -7,29 +7,35 @@ class ProjectsPreview extends React.Component {
   render() {
     return (
       <div className={this.props.view === 'home' || this.props.view === 'projects' ? '' : 'hidden'}>
-        <div className="row demo-projects-container">
-          <div className="col-sm-10 col-sm-offset-1">
+        <div className="row">
+          <div className="col-sm-8 col-sm-offset-2">
+            <HeadingWrapper>
+              <ProjectsTitle>Projects</ProjectsTitle>
+              <TitleRule />
+            </HeadingWrapper>
             <ProjectDemosContainer>
               {projects.map((project, index) => {
                 return (
-                  <ProjectDemo key={index}>
+                  <ProjectDemo key={index} bgColor={index % 2 !== 0 ? '#3b3a36' : 'white'} color={index % 2 !== 0 ? 'white' : 'currentcolor'}>
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <ProjectImage url={project.image}></ProjectImage>
+                      <ProjectImage url={project.image} className={index % 2 !== 0 ? 'pull-right' : ''}></ProjectImage>
                     </a>
-                    <DemoDetails>
-                      <a className="demo-title-link" href={project.url} target="_blank" rel="noopener noreferrer">
-                        <DemoTitle>{project.name}</DemoTitle>
-                      </a>
-                      <p>{project.description}</p>
-                      <DemoSubDescription>
-                        <p>
-                          <DemoSubtitle>Languages: </DemoSubtitle> {project.languages}
-                        </p>
-                        <p>
-                          <DemoSubtitle>Technologies: </DemoSubtitle> {project.tech}
-                        </p>
-                      </DemoSubDescription>
-                    </DemoDetails>
+                    <DetailsWrapper>
+                      <DemoDetails>
+                        <a className="demo-title-link" href={project.url} target="_blank" rel="noopener noreferrer">
+                          <DemoTitle color={index % 2 !== 0 ? 'white' : 'black'}>{project.name}</DemoTitle>
+                        </a>
+                        <p>{project.description}</p>
+                        <DemoSubDescription>
+                          <p>
+                            <DemoSubtitle>Languages: </DemoSubtitle> {project.languages}
+                          </p>
+                          <p>
+                            <DemoSubtitle>Technologies: </DemoSubtitle> {project.tech}
+                          </p>
+                        </DemoSubDescription>
+                      </DemoDetails>
+                    </DetailsWrapper>
                   </ProjectDemo>
                 )
               })}
@@ -41,15 +47,38 @@ class ProjectsPreview extends React.Component {
   }
 }
 
+const DetailsWrapper = styled.div`
+  width: 60%;
+  float: left;
+`
+
+const TitleRule = styled.hr`
+  width: 300px;
+  margin: 0 auto;
+  border-color: black;
+`
+
+const HeadingWrapper = styled.div`
+  text-align: center;
+  top: 50px;
+  position: relative;
+`
+
+const ProjectsTitle = styled.h3`
+  font-size: 3em;
+`
+
 const ProjectDemosContainer = styled.div`
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 75px;
 `
 
 const ProjectDemo = styled.div`
   margin: 30px 0;
   padding: 25px;
   height: 300px;
+  border: 2px solid #e9ece5;
+  background-color: ${props => props.bgColor};
+  color: ${props => props.color};
 `
 
 const ProjectImage = styled.div`
@@ -75,7 +104,7 @@ const DemoDetails = styled.div`
 const DemoTitle = styled.h3`
   font-size: 1.75em;
   text-decoration: none;
-  color: black;
+  color: ${props => props.color};
 `
 
 const DemoSubDescription = styled.div`
