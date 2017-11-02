@@ -48,7 +48,7 @@ function parseHash(url) {
       parsed = view
     }
   })
-  return parsed || 'home'
+  return parsed || 'error'
 }
 
 function suggestInput(selected) {
