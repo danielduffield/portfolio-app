@@ -7,6 +7,7 @@ import About from './about.js'
 import Resume from './resume.js'
 import ProjectsPreview from './projects-preview.js'
 import Contact from './contact.js'
+import ErrorPage from './error-page.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -30,8 +31,10 @@ class App extends React.Component {
         updated = true
       }
     })
+    if (!updated && hash !== '' && hash !== '#') this.updateView('error')
   }
   render() {
+    console.log(this.props.view)
     return (
       <div id="app-container">
         <NavBar />
@@ -40,6 +43,7 @@ class App extends React.Component {
         <Resume />
         <ProjectsPreview />
         <Contact />
+        <ErrorPage />
       </div>
     )
   }
