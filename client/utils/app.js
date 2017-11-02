@@ -30,7 +30,6 @@ class App extends React.Component {
         updated = true
       }
     })
-    if (!updated) window.location.hash = '#'
   }
   render() {
     return (
